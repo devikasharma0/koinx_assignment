@@ -42,8 +42,7 @@ const SideHero = async () => {
                 <ul className="space-y-2 py-5">
                     <li className="flex justify-between items-center ">
                         <div className="flex justify-start gap-2 items-center" >
-                            <Image src="/Ethereum.png
-                            " alt="logo" width={30} height={30} />	Ethereum (ETH)
+                            <Image src="/Ethereum.png" alt="logo" width={30} height={30} />	Ethereum (ETH)
                         </div>
                         <div className='flex relative'>
                                 <BiSolidUpArrow className="absolute left-1 top-1 mt-1 text-[#14B079] text-sm" />
