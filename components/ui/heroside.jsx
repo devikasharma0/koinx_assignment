@@ -1,8 +1,28 @@
 import React from 'react'
 import Image from 'next/image'
 import { FaArrowRight } from "react-icons/fa6";
+import { BiSolidUpArrow } from "react-icons/bi";
+import { fetchingPrice } from '@/lib/utils';
+const SideHero = async () => {
+    const ethereumPriceChange = await fetchingPrice('ethereum')
+    const bitcoinPriceChange = await fetchingPrice('bitcoin')
+    const dogecoinPriceChange = await fetchingPrice('dogecoin')
 
-const SideHero = () => {
+    let bgColor = "bg-[#14B079]/20"
+    let textcolor = "text-[#14B079]"
+    if (bitcoinPriceChange[0].price_change_percentage_24h < 0) {
+        bgColor = "bg-[#FF0000]/20"
+        textcolor = "text-[#FF0000]"
+
+    }
+    if (ethereumPriceChange[0].price_change_percentage_24h < 0) {
+        bgColor = "bg-[#FF0000]/20"
+        textcolor = "text-[#FF0000]"
+    }
+    if (dogecoinPriceChange[0].price_change_percentage_24h < 0) {
+        bgColor = "bg-[#FF0000]/20"
+        textcolor = "text-[#FF0000]"
+    }
     return (
       
         <div className="w-[426px]  bg-transparent flex flex-col justify-center items-center gap-5 ">
