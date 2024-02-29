@@ -22,21 +22,31 @@ const SideHero = () => {
                 <ul className="space-y-2 py-5">
                     <li className="flex justify-between items-center ">
                         <div className="flex justify-start gap-2 items-center" >
-                            <Image src="/Ethereum.png" alt="logo" width={30} height={30} />	Ethereum (ETH)
+                            <Image src="/Ethereum.png
+                            " alt="logo" width={30} height={30} />	Ethereum (ETH)
                         </div>
-                        <button className="bg-[#14B079]/20 text-[#14B079] rounded py-1 px-2">8.21%</button>
+                        <div className='flex relative'>
+                                <BiSolidUpArrow className="absolute left-1 top-1 mt-1 text-[#14B079] text-sm" />
+                                <button className={`${bgColor} ${textcolor}  rounded py-1 px-2 pl-6`}>{ethereumPriceChange[0].price_change_percentage_24h.toFixed(2)}%</button>
+                        </div>
                     </li>
                     <li className="flex justify-between items-center ">
                         <div className="flex justify-start gap-2 items-center" >
                             <Image src="/bitcoin.png" alt="logo" width={30} height={30} />	Bitcoin (BTC)
                         </div>
-                        <button className="bg-[#14B079]/20 text-[#14B079] rounded py-1 px-2">8.21%</button>
+                        <div className='flex relative'>
+                                <BiSolidUpArrow className="absolute left-1 top-1 mt-1 text-[#14B079] text-sm" />
+                                <button className={`${bgColor} ${textcolor}  rounded py-1 px-2 pl-6`}>{bitcoinPriceChange[0].price_change_percentage_24h.toFixed(2)}%</button>
+                        </div>
                     </li>
                     <li className="flex justify-between items-center ">
                         <div className="flex justify-start gap-2 items-center" >
                             <Image src={dogecoinPriceChange[0].image} alt="logo" width={30} height={30} />	Dogecoin (DOGE)
                         </div>
-                        <button className="bg-[#14B079]/20 text-[#14B079] rounded py-1 px-2">8.21%</button>
+                        <div className='flex relative'>
+                                <BiSolidUpArrow className="absolute left-1 top-1 mt-1 text-[#14B079] text-sm" />
+                                <button className={`${bgColor} ${textcolor}  rounded py-1 px-2 pl-6`}>{dogecoinPriceChange[0].price_change_percentage_24h.toFixed(1)}%</button>
+                        </div>
                     </li>
 
 
